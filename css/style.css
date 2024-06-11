@@ -294,7 +294,7 @@ header nav ul li a:hover {
 }
 
 /* Responsive styles for small screens */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .nav-links {
         display: none; /* Hidden by default */
     }
@@ -339,7 +339,6 @@ section.title {
     margin: 4% auto; /* Center horizontally */
     width: 80%; /* Change width to fit-content to allow expansion */
     max-width: 1200px;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     box-sizing: border-box; /* Include padding in the element's total width and height */
     overflow: hidden; /* Prevent text overflow */
     text-align: center; /* Center align text */
@@ -462,6 +461,7 @@ section.about {
     align-items: center;
     margin-top: 140px;
     width: 100%;
+    padding-top: 0%;
 }
 
 .tecv-img2 {
@@ -490,7 +490,7 @@ section.about {
     border-radius: 10px; /* Optional rounded corners */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .responsive-iframe {
         width: 80%;
         height: 50vh; /* Adjust the height for smaller screens */
@@ -624,7 +624,6 @@ footer p {
     height: 138.56px;
     background-color: #0a1a2a;
     margin: 69.28px 0;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -755,6 +754,7 @@ footer p {
     box-sizing: border-box; /* Ensure padding is included in the width */
     overflow: hidden; /* Prevent overflow */
     margin-top: 5%;
+    padding-bottom: 5rem; /* Add padding at the bottom */
 }
 
 .design h2-2 {
@@ -838,9 +838,21 @@ footer p {
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
     .rectangle {
-        width: 100%; /* Single column on small screens */
+        width: calc(50% - 1rem); /* Two images per row with some spacing */
+    }
+
+    .design-grid {
+        grid-template-columns: repeat(2, 1fr); /* Ensure two columns */
+        gap: 1rem; /* Adjust gap between items */
+        padding: 4% 4%; /* Add padding to prevent overflow */
+    }
+
+    .design-item {
+        margin-bottom: 2rem; /* Adjust margin for spacing */
+        padding-bottom: 2rem; /* Add padding at the bottom */
     }
 }
+
 
 /*===============================================================================*/
 /*                              PHOTO SECTIONS                                   */
@@ -1038,7 +1050,7 @@ footer p {
 /*                              RESPONSIVE STYLES                                */
 /*===============================================================================*/
 
-@media (max-width: 678px) {
+@media (max-width: 800px) {
     header nav ul {
         display: none;
         flex-direction: column;
@@ -1068,9 +1080,9 @@ footer p {
         margin: 0 auto;
         display: block;
         text-align: left;
-        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        clip-path: polygon(50% 10%, 100% 25%, 100% 75%, 50% 90%, 0% 75%, 0% 25%);
         margin-top: 3%;
-        margin-bottom: 3%;
+        margin-bottom: 0%;
     }
 
     .hex-grid {
