@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEC-V Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="images/Logo.png" alt="Logo" class="logo-img">
+                <h1 class="logo">TEC-V Project</h1>
+            </div>
+            <nav>
+                <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+                    <svg width="70" height="70" viewBox="0 0 100 100">
+                        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                        <path class="line line2" d="M 20,50 H 80" />
+                        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                    </svg>
+                </button>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="photos.html">Photos</a>
+                </div>
+            </nav>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Spacing -->
+    <section class="about">
+    </section>
+
+    <!-- Image Section -->
+    <section class="image-section">
+        <div class="image-container">
+            <img src="images/TecVShark.jpg" alt="TEC-V Image" class="centered-image">
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="about">
+        <div class="video-container">
+            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/i42WiUBM4xA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Image Section -->
+    <section class="image-section">
+        <div class="image-container">
+            <img src="images/TecVSideProfile.jpg" alt="TEC-V Image" class="centered-image">
+        </div>
+    </section>
+
+    <section class="image-section">
+        <div class="image-container">
+            <img src="images/TECV4.png" alt="TEC-V Image" class="centered-image">
+        </div>
+    </section>
+
+    <section class="image-section">
+        <div class="image-container">
+            <img src="images/D9.jpg" alt="TEC-V Image" class="centered-image">
+        </div>
+    </section>
+
+    <section class="image-section">
+        <div class="image-container">
+            <img src="images/D10.jpg" alt="TEC-V Image" class="centered-image">
+        </div>
+    </section>
+
+    <section class="image-section">
+        <div class="image-container">
+            <img src="images/D11.jpg" alt="TEC-V Image" class="centered-image">
+        </div>
+    </section>
+
+    <section class="image-section">
+        <div class="image-container">
+            <img src="images/D1.jpg" alt="TEC-V Image" class="centered-image">
+        </div>
+    </section>
+
+    <section class="image-section">
+        <div class="image-container">
+            <img src="images/D2.jpg" alt="TEC-V Image" class="centered-image">
+        </div>
+    </section>
+
+    <section class="image-section">
+        <div class="image-container">
+            <img src="images/D3.jpg" alt="TEC-V Image" class="centered-image">
+        </div>
+    </section>
+
+    <section class="image-section">
+        <div class="image-container">
+            <img src="images/D4.jpg" alt="TEC-V Image" class="centered-image">
+        </div>
+    </section>
+
+    <section class="image-section">
+        <div class="image-container">
+            <img src="images/D5.jpg" alt="TEC-V Image" class="centered-image">
+        </div>
+    </section>
+
+    <section class="image-section">
+        <div class="image-container">
+            <img src="images/D6.jpg" alt="TEC-V Image" class="centered-image">
+        </div>
+    </section>
+
+    <section class="image-section">
+        <div class="image-container">
+            <img src="images/D7.jpg" alt="TEC-V Image" class="centered-image">
+        </div>
+    </section>
+
+    <section class="image-section">
+        <div class="image-container">
+            <img src="images/D8.jpg" alt="TEC-V Image" class="centered-image">
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TEC-V Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for design details and team member details -->
+    <div id="teamModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="hex big-hex">
+                <div class="hex-in">
+                    <div id="modalImage" class="hex-img"></div>
+                </div>
+            </div>
+            <div class="modal-text">
+                <h2 id="modalName"></h2>
+                <h3 id="modalJob"></h3>
+                <p id="modalSummary"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var navList = document.querySelector('.nav-list');
+            navList.classList.toggle('active');
+        }
+
+        window.addEventListener('scroll', function() {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                var rect = section.getBoundingClientRect();
+                var distanceFromTop = rect.top - window.innerHeight;
+                var distanceFromBottom = rect.bottom;
+
+                if (distanceFromTop < 0 && distanceFromBottom > 0) {
+                    section.style.opacity = 1;
+                    section.style.transform = `translateY(0px)`;
+                } else {
+                    section.style.opacity = 0;
+                    section.style.transform = 'translateY(20px)';
+                }
+            });
+        });
+
+        // Modal functionality
+        var modal = document.getElementById("teamModal");
+        var modalImage = document.getElementById("modalImage");
+        var modalName = document.getElementById("modalName");
+        var modalJob = document.getElementById("modalJob");
+        var modalSummary = document.getElementById("modalSummary");
+
+        document.querySelectorAll('.hex').forEach(function(hex) {
+            hex.addEventListener('click', function() {
+                modal.style.display = "block";
+                modalImage.style.backgroundImage = hex.style.backgroundImage;
+                modalName.textContent = hex.dataset.name;
+                modalJob.textContent = hex.dataset.job || hex.dataset.name; // Use the name as job if not provided
+                modalSummary.textContent = hex.dataset.summary;
+            });
+        });
+
+        document.querySelector('.modal .close').addEventListener('click', function() {
+            modal.style.display = "none";
+        });
+
+        window.addEventListener('click', function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        });
+
+        const menuButton = document.querySelector(".menu");
+        const navLinks = document.querySelector(".nav-links");
+    
+        menuButton.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>

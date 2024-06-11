@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEC-V Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="images/Logo.png" alt="Logo" class="logo-img">
+                <h1 class="logo">TEC-V Project</h1>
+            </div>
+            <nav>
+                <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+                    <svg width="70" height="70" viewBox="0 0 100 100">
+                        <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                        <path class="line line2" d="M 20,50 H 80" />
+                        <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                    </svg>
+                </button>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="photos.html">Photos</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Spacing -->
+    <section class="about">
+    </section>
+
+    <!-- Image Section -->
+    <section class="image-section">
+        <div class="image-container">
+            <img src="images/TeamPhoto.jpg" alt="TEC-V Image" class="centered-image">
+        </div>
+    </section>
+    
+
+    <section class="mission">
+        <div class="section-content">
+            <h2>Mission Statement</h2>
+            <h2-2>Topographic</h2-2>
+            <h2-2>Exploration</h2-2>
+            <h2-2>Cave</h2-2>
+            <h2-2>Vehicle</h2-2>
+            <h3>Develop an optimized scanning and mapping system designed 
+                for enclosed underwater environments, utilizing integrated 
+                instrumentation on the TEC-V platform. This system aims to 
+                enhance enclosed environmental mapping, cave exploration, 
+                port and harbor monitoring, and under-ice surveying, while 
+                providing an entry-level ROV platform</h3>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="section-content">
+            <h2>About Us</h2>
+            <p>Our team consists of:</p>
+            <ul>
+                <li>Stephen Coster (OE) - Project Lead</li>
+                <li>Henry Hill (OE) - Vehicle Dynamics </li>
+                <li>Mike Dowling (CSE) - Software Integration Technician</li>
+                <li>Gabor Papp (ME) - Mechanical Design Engineer</li>
+            </ul>
+            <h3>We are a group of dedicated engineers and technicians 
+                focused on developing innovative solutions for underwater 
+                exploration.</h3>
+        </div>
+    </section>
+
+    <section class="design">
+        <div class="design-section">
+            <h2-2>Meet the Team</h2-2>
+                <div class="design-item">
+                    <div class="grid">
+                        <div class="rectangle tooltip" 
+                            data-name="Dr. Stephen Wood" 
+                            data-job="Program Chair for Ocean Engineering" 
+                            data-summary="Professor | College of Engineering and Science - Ocean Engineering and Marine Sciences" 
+                            style="background-image: url('images/Wood.jpg');">
+                            <p>Dr. Stephen Wood</p>
+                        </div>
+                        <div class="rectangle tooltip" 
+                            data-name="Dr. Marius Silaghi" 
+                            data-job="Professor | College of Engineering and Science - Electrical Engineering and Computer Science" 
+                            data-summary="" 
+                            style="background-image: url('images/Silaghi.jpg');">
+                            <p>Dr. Marius Silaghi</p>
+                        </div>
+                        <div class="rectangle tooltip" 
+                            data-name="Project Lead" 
+                            data-job="Major: Ocean Engineer" 
+                            data-summary="" 
+                            style="background-image: url('images/Stephen.PNG');">
+                            <p>Stephen Coster</p>
+                        </div>
+                        <div class="rectangle tooltip" 
+                            data-name="Vehicle Dynamics" 
+                            data-job="Major: Ocean Engineer" 
+                            data-summary="" 
+                            style="background-image: url('images/Henry.PNG');">
+                            <p>Henry Hill</p>
+                        </div>
+                        <div class="rectangle tooltip" 
+                            data-name="Mechanical Design Engineer" 
+                            data-job="Major: Mechanical Engineering" 
+                            data-summary="" 
+                            style="background-image: url('images/Gabor.PNG');">
+                            <p>Gabor Papp</p>
+                        </div>
+                        <div class="rectangle tooltip" 
+                            data-name="Software Integration Technician" 
+                            data-job="Major: Computer Science" 
+                            data-summary="Designed TEC-V information webpage and was in charge of sonar data acquisition and translation to a 3-Dimensional interface."
+                            style="background-image: url('images/Mike.png');">
+                            <p>Michael Dowling</p>
+                        </div>
+                    </div>
+                </div>
+                <h3></h3>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TEC-V Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for design details and team member details -->
+    <div id="teamModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="hex big-hex">
+                <div class="hex-in">
+                    <div id="modalImage" class="hex-img"></div>
+                </div>
+            </div>
+            <div class="modal-text">
+                <h2 id="modalName"></h2>
+                <h3 id="modalJob"></h3>
+                <p id="modalSummary"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var navList = document.querySelector('.nav-list');
+            navList.classList.toggle('active');
+        }
+
+        window.addEventListener('scroll', function() {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                var rect = section.getBoundingClientRect();
+                var distanceFromTop = rect.top - window.innerHeight;
+                var distanceFromBottom = rect.bottom;
+
+                if (distanceFromTop < 0 && distanceFromBottom > 0) {
+                    section.style.opacity = 1;
+                    section.style.transform = `translateY(0px)`;
+                } else {
+                    section.style.opacity = 0;
+                    section.style.transform = 'translateY(20px)';
+                }
+            });
+        });
+
+        // Modal functionality
+        var modal = document.getElementById("teamModal");
+        var modalImage = document.getElementById("modalImage");
+        var modalName = document.getElementById("modalName");
+        var modalJob = document.getElementById("modalJob");
+        var modalSummary = document.getElementById("modalSummary");
+
+        document.querySelectorAll('.hex').forEach(function(hex) {
+            hex.addEventListener('click', function() {
+                modal.style.display = "block";
+                modalImage.style.backgroundImage = hex.style.backgroundImage;
+                modalName.textContent = hex.dataset.name;
+                modalJob.textContent = hex.dataset.job || hex.dataset.name; // Use the name as job if not provided
+                modalSummary.textContent = hex.dataset.summary;
+            });
+        });
+
+        document.querySelector('.modal .close').addEventListener('click', function() {
+            modal.style.display = "none";
+        });
+
+        window.addEventListener('click', function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        });
+
+        document.querySelectorAll('.hex').forEach(function(hex) {
+            hex.addEventListener('mouseover', function(e) {
+                const popupCue = this.querySelector('.popup-cue');
+                popupCue.classList.add('show-popup');
+
+                hex.addEventListener('mousemove', function(e) {
+                    const rect = hex.getBoundingClientRect();
+                    popupCue.style.left = (e.clientX - rect.left + 20) + 'px'; // Adjusted to position to the right
+                    popupCue.style.top = (e.clientY - rect.top - 10) + 'px'; // Adjusted to align vertically with cursor
+                });
+            });
+
+            hex.addEventListener('mouseout', function() {
+                const popupCue = this.querySelector('.popup-cue');
+                popupCue.classList.remove('show-popup');
+            });
+        });
+
+        const menuButton = document.querySelector(".menu");
+        const navLinks = document.querySelector(".nav-links");
+    
+        menuButton.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>
