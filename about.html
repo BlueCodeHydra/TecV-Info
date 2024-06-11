@@ -38,47 +38,56 @@
 
     <!-- Image Section -->
     <section class="image-section">
-        <div class="image-container">
-            <img src="images/TeamPhoto.jpg" alt="TEC-V Image" class="centered-image">
-        </div>
-    </section>
-    
-
-    <section class="mission">
-        <div class="section-content">
-            <h2>Mission Statement</h2>
-            <h2-2>Topographic</h2-2>
-            <h2-2>Exploration</h2-2>
-            <h2-2>Cave</h2-2>
-            <h2-2>Vehicle</h2-2>
-            <h3>Develop an optimized scanning and mapping system designed 
-                for enclosed underwater environments, utilizing integrated 
-                instrumentation on the TEC-V platform. This system aims to 
-                enhance enclosed environmental mapping, cave exploration, 
-                port and harbor monitoring, and under-ice surveying, while 
-                providing an entry-level ROV platform</h3>
-        </div>
-    </section>
-
-    <section class="about">
-        <div class="section-content">
-            <h2>About Us</h2>
-            <p>Our team consists of:</p>
-            <ul>
-                <li>Stephen Coster (OE) - Project Lead</li>
-                <li>Henry Hill (OE) - Vehicle Dynamics </li>
-                <li>Mike Dowling (CSE) - Software Integration Technician</li>
-                <li>Gabor Papp (ME) - Mechanical Design Engineer</li>
-            </ul>
-            <h3>We are a group of dedicated engineers and technicians 
-                focused on developing innovative solutions for underwater 
-                exploration.</h3>
+        <div class="image-container" maxheight="400px">
+            <img src="images/TeamPhoto2.jpg" alt="TEC-V Image" class="centered-image">
         </div>
     </section>
 
     <section class="design">
         <div class="design-section">
-            <h2-2>Meet the Team</h2-2>
+            <h2-1>Mission Statement</h2-1>
+            <div class="design-item">
+                <h2-2>Topographic 
+                    <h2-2>Exploration</h2-2>
+                    <h2-2>Cave</h2-2>
+                    <h2-2>Vehicle</h2-2>
+                </h2-2>
+                <h3>Develop an optimized scanning and mapping system designed 
+                    for enclosed underwater environments, utilizing integrated 
+                    instrumentation on the TEC-V platform. This system aims to 
+                    enhance enclosed environmental mapping, cave exploration, 
+                    port and harbor monitoring, and under-ice surveying, while 
+                    providing an entry-level ROV platform.
+                </h3>
+                <h2> </h2>
+                <h2> </h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="design">
+        <div class="design-section">
+            <h2-1>About Us</h2-1>
+            <div class="design-item">
+                <p>Our team consists of:</p>
+                <li>Stephen Coster (OE) - Project Lead</li>
+                <li>Henry Hill (OE) - Vehicle Dynamics </li>
+                <li>Mike Dowling (CSE) - Software Integration Technician</li>
+                <li>Gabor Papp (ME) - Mechanical Design Engineer</li>
+
+                <h3>We are a group of dedicated engineers and technicians 
+                    focused on developing innovative solutions for underwater 
+                    exploration.
+                </h3>
+                <h2> </h2>
+                <h2> </h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="design">
+        <div class="design-section">
+            <h2-1>Meet the Team</h2-1>
                 <div class="design-item">
                     <div class="grid">
                         <div class="rectangle tooltip" 
@@ -140,18 +149,14 @@
     <div id="teamModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <div class="hex big-hex">
-                <div class="hex-in">
-                    <div id="modalImage" class="hex-img"></div>
-                </div>
-            </div>
+            <div class="rectangle" id="modalImage"></div>
             <div class="modal-text">
                 <h2 id="modalName"></h2>
                 <h3 id="modalJob"></h3>
                 <p id="modalSummary"></p>
             </div>
         </div>
-    </div>
+    </div>    
 
     <script>
         function toggleMenu() {
@@ -183,50 +188,51 @@
         var modalJob = document.getElementById("modalJob");
         var modalSummary = document.getElementById("modalSummary");
 
-        document.querySelectorAll('.hex').forEach(function(hex) {
-            hex.addEventListener('click', function() {
+        document.querySelectorAll('.hex, .rectangle').forEach(function(item) {
+            item.addEventListener('click', function() {
                 modal.style.display = "block";
-                modalImage.style.backgroundImage = hex.style.backgroundImage;
-                modalName.textContent = hex.dataset.name;
-                modalJob.textContent = hex.dataset.job || hex.dataset.name; // Use the name as job if not provided
-                modalSummary.textContent = hex.dataset.summary;
+                modalImage.style.backgroundImage = item.style.backgroundImage;
+                modalName.textContent = item.dataset.name;
+                modalJob.textContent = item.dataset.job || item.dataset.name; // Use the name as job if not provided
+                modalSummary.textContent = item.dataset.summary;
             });
         });
-
+        
         document.querySelector('.modal .close').addEventListener('click', function() {
             modal.style.display = "none";
         });
-
+        
         window.addEventListener('click', function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
         });
-
-        document.querySelectorAll('.hex').forEach(function(hex) {
-            hex.addEventListener('mouseover', function(e) {
+        
+        document.querySelectorAll('.hex, .rectangle').forEach(function(item) {
+            item.addEventListener('mouseover', function(e) {
                 const popupCue = this.querySelector('.popup-cue');
                 popupCue.classList.add('show-popup');
-
-                hex.addEventListener('mousemove', function(e) {
-                    const rect = hex.getBoundingClientRect();
+        
+                item.addEventListener('mousemove', function(e) {
+                    const rect = item.getBoundingClientRect();
                     popupCue.style.left = (e.clientX - rect.left + 20) + 'px'; // Adjusted to position to the right
                     popupCue.style.top = (e.clientY - rect.top - 10) + 'px'; // Adjusted to align vertically with cursor
                 });
             });
-
-            hex.addEventListener('mouseout', function() {
+        
+            item.addEventListener('mouseout', function() {
                 const popupCue = this.querySelector('.popup-cue');
                 popupCue.classList.remove('show-popup');
             });
         });
-
+        
         const menuButton = document.querySelector(".menu");
         const navLinks = document.querySelector(".nav-links");
     
         menuButton.addEventListener("click", () => {
             navLinks.classList.toggle("active");
         });
+
     </script>
 </body>
 </html>
