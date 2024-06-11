@@ -828,7 +828,7 @@ footer p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     position: center;
-    width: 100%; /* Ensure the items take up full width */
+    width: 90%; /* Ensure the items take up full width */
     max-width: 600px; /* Set a max-width to prevent excessive stretching */
     margin: 0 auto; /* Center the items */
     margin-bottom: 5%;
