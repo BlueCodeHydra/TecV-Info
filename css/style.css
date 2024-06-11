@@ -853,7 +853,7 @@ footer p {
     width: calc(50% - 1rem); /* Two images per row with some spacing */
     height: 150px; /* Adjust the height as needed */
     margin: 0;
-    background-size: contain; /* Ensure the entire image is visible */
+    background-size: cover; /* Ensure the entire image is visible */
     background-position: center;
     background-repeat: no-repeat; /* Prevent tiling */
     border-radius: 15px; /* Rounded edges */
@@ -954,7 +954,7 @@ footer p {
     width: calc(50% - 1rem); /* Two images per row with some spacing */
     height: 150px; /* Adjust the height as needed */
     margin: 0;
-    background-size: contain; /* Ensure the entire image is visible */
+    background-size: cover; /* Ensure the entire image is visible */
     background-position: center;
     background-repeat: no-repeat; /* Prevent tiling */
     border-radius: 15px; /* Rounded edges */
@@ -1026,7 +1026,7 @@ footer p {
     margin: 20px auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-size: cover; /* Ensure the image covers the entire div */
+    background-size: contain; /* Ensure the image covers the entire div */
     background-position: center;
     background-repeat: no-repeat;
 }

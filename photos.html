@@ -184,32 +184,34 @@
         var modalJob = document.getElementById("modalJob");
         var modalSummary = document.getElementById("modalSummary");
 
-        document.querySelectorAll('.hex').forEach(function(hex) {
-            hex.addEventListener('click', function() {
+        document.querySelectorAll('.hex, .rectangle').forEach(function(item) {
+            item.addEventListener('click', function() {
                 modal.style.display = "block";
-                modalImage.style.backgroundImage = hex.style.backgroundImage;
-                modalName.textContent = hex.dataset.name;
-                modalJob.textContent = hex.dataset.job || hex.dataset.name; // Use the name as job if not provided
-                modalSummary.textContent = hex.dataset.summary;
+                modalImage.style.backgroundImage = item.style.backgroundImage;
+                modalName.textContent = item.dataset.name;
+                modalJob.textContent = item.dataset.job || item.dataset.name; // Use the name as job if not provided
+                modalSummary.textContent = item.dataset.summary;
             });
         });
-
+        
         document.querySelector('.modal .close').addEventListener('click', function() {
             modal.style.display = "none";
         });
-
+        
         window.addEventListener('click', function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
         });
-
+        
+        
         const menuButton = document.querySelector(".menu");
         const navLinks = document.querySelector(".nav-links");
     
         menuButton.addEventListener("click", () => {
             navLinks.classList.toggle("active");
         });
+
     </script>
 </body>
 </html>

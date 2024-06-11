@@ -461,23 +461,6 @@
             }
         });
         
-        document.querySelectorAll('.hex, .rectangle').forEach(function(item) {
-            item.addEventListener('mouseover', function(e) {
-                const popupCue = this.querySelector('.popup-cue');
-                popupCue.classList.add('show-popup');
-        
-                item.addEventListener('mousemove', function(e) {
-                    const rect = item.getBoundingClientRect();
-                    popupCue.style.left = (e.clientX - rect.left + 20) + 'px'; // Adjusted to position to the right
-                    popupCue.style.top = (e.clientY - rect.top - 10) + 'px'; // Adjusted to align vertically with cursor
-                });
-            });
-        
-            item.addEventListener('mouseout', function() {
-                const popupCue = this.querySelector('.popup-cue');
-                popupCue.classList.remove('show-popup');
-            });
-        });
         
         const menuButton = document.querySelector(".menu");
         const navLinks = document.querySelector(".nav-links");
