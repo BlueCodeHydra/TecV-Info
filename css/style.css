@@ -337,7 +337,7 @@ section.title {
     color: #0a1a2a;
     padding: 12% 2% 5%; /* Add padding to ensure text is not touching the edges */
     margin: 4% auto; /* Center horizontally */
-    width: 80%; /* Change width to fit-content to allow expansion */
+    width: 60%; /* Change width to fit-content to allow expansion */
     max-width: 1200px;
     max-height: 500px;
     box-sizing: border-box; /* Include padding in the element's total width and height */
@@ -522,8 +522,8 @@ section.about {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px 0; /* Adjust as needed for spacing */
-    width: 100%;
+    margin: 40px 10%; /* Adjust as needed for spacing */
+    width: 80%;
 }
 
 .image-container {
@@ -536,6 +536,7 @@ section.about {
 
 .centered-image {
     width: 90%; /* Adjust width as needed */
+    max-width: 800px;
     border: 2px solid #ffffff; /* White border */
     border-radius: 5%; /* Rounded edges */
     height: auto; /* Maintain aspect ratio */
