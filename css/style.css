@@ -626,7 +626,17 @@ section.about {
     color: #0056b3;
 }
 
+.design h2-2 {
+    font-size: 30px;
+    text-align: center;
+    margin: 2px 0;
+    display: inline-block;
+}
 
+.design h2-2::first-letter {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
 /*===============================================================================*/
 /*                               FOOTER STYLES                                   */
 /*===============================================================================*/
@@ -793,7 +803,7 @@ footer p {
     padding-bottom: 5rem; /* Add padding at the bottom */
 }
 
-.design h2-2 {
+.design h2-1 {
     font-size: 50px;
     text-align: center;
     margin-bottom: 0;
