@@ -410,6 +410,25 @@ section.title {
 /*===============================================================================*/
 /*                              ABOUT STYLES                                     */
 /*===============================================================================*/
+.section-content-about {
+    background: rgba(255, 255, 255, 0.85); /* Slightly transparent background to blend with hex background */
+    color: #0a1a2a;
+    padding: 12% 2% 5%; /* Add padding to ensure text is not touching the edges */
+    margin: 4% auto; /* Center horizontally */
+    width: 80%; /* Change width to fit-content to allow expansion */
+    max-width: 1200px;
+    max-height: 700px;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    overflow: hidden; /* Prevent text overflow */
+    text-align: center; /* Center align text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
 .about h2 {
     font-size: 40px;
@@ -475,7 +494,7 @@ section.about {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 140px;
+    margin-top: 100px;
     width: 100%;
     padding-top: 0%;
 }
@@ -509,6 +528,7 @@ section.about {
 @media (max-width: 800px) {
     .responsive-iframe {
         width: 80%;
+        height: 50vh; /* Adjust the height for smaller screens */
     }
 }
 
