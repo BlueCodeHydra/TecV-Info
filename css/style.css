@@ -346,6 +346,7 @@ section.title {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    clip-path: polygon(50% 10%, 100% 25%, 100% 75%, 50% 90%, 0% 75%, 0% 25%);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -402,6 +403,13 @@ section.title {
     margin-right: 5%;
     margin-bottom: 20%;
     color: rgba(2, 38, 46, 0.938);
+}
+
+@media (max-width: 90px) {
+    .responsive-iframe {
+        width: 10%;
+        height: 50vh; /* Adjust the height for smaller screens */
+    }
 }
 
 /*===============================================================================*/
