@@ -509,7 +509,6 @@ section.about {
 @media (max-width: 800px) {
     .responsive-iframe {
         width: 80%;
-        height: 50vh; /* Adjust the height for smaller screens */
     }
 }
 
